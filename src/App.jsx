@@ -11,7 +11,7 @@ const App = () => {
   };
 
   const onBackToList = () => {
-    setSelectedRecipe(null); // Reset selection to go back to the list
+    setSelectedRecipe(null);
   };
 
   return (

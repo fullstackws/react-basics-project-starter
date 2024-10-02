@@ -1,4 +1,3 @@
-/* eslint-disable no-unused-vars */
 import React, { useState } from "react";
 import {
   Box,
@@ -54,12 +53,12 @@ const RecipeListPage = ({ onSelectRecipe }) => {
             value={searchTerm}
             onChange={(e) => setSearchTerm(e.target.value)}
             mr={2}
-            m={0} // Set margin to 0
+            m={0}
           />
           <Select
             value={healthLabel}
             onChange={(e) => setHealthLabel(e.target.value)}
-            m={0} // Set margin to 0
+            m={0}
           >
             <option value="">All health labels</option>
             <option value="Vegan">Vegan</option>
@@ -74,9 +73,9 @@ const RecipeListPage = ({ onSelectRecipe }) => {
       <Flex flexWrap="wrap" justifyContent="center" m={0}>
         {filteredRecipes.map((recipe) => (
           <Box
-            key={recipe.recipe.id} // Use the id for the key
+            key={recipe.recipe.id}
             p={4}
-            m={2} // This can stay as it is for outer spacing
+            m={2}
             borderRadius="lg"
             boxShadow="md"
             bg="white"
@@ -104,7 +103,7 @@ const RecipeListPage = ({ onSelectRecipe }) => {
                 )
                 .map((dietLabel, index) => (
                   <Box
-                    key={`${recipe.recipe.id}-${dietLabel}`} // Use a combination of recipe id and diet label for uniqueness
+                    key={`${recipe.recipe.id}-${dietLabel}`}
                     bg="lightgreen"
                     color="darkgreen"
                     px={2}
@@ -219,7 +218,7 @@ const RecipeListPage = ({ onSelectRecipe }) => {
                 <Flex flexWrap="wrap" justifyContent="center" m={0}>
                   {recipe.recipe.cautions.map((caution, index) => (
                     <Box
-                      key={`${recipe.recipe.id}-${caution}`} // Use a combination of recipe id and caution for uniqueness
+                      key={`${recipe.recipe.id}-${caution}`}
                       bg="red.500"
                       color="white"
                       px={2}
